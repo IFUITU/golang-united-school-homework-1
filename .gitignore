@@ -17,3 +17,6 @@
 *go.sum
 .mod
 .sum
+
+./go.mod
+./go.sum
