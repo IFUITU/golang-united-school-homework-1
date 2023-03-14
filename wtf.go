@@ -34,7 +34,7 @@ func IsUser(user interface{}) bool {
 	return fmt.Sprintf("%T", user) == fmt.Sprintf("%T", User{})
 }
 func ProcessUser(ui UserInterface) string {
-	ui.SetFirstName("ABCDEFGH")
-	ui.SetLastName("JKLMNOP")
+	// ui.SetFirstName("ABCDEFGH")
+	// ui.SetLastName("JKLMNOP")
 	return ui.FullName()
 }
