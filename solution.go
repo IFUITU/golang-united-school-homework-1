@@ -26,7 +26,7 @@ func (u *User) FullName() string {
 func New() User {
 	return User{}
 }
-func ResetUser(user UserInterface) {
+func ResetUser(user *User) {
 	(*user).firstName = ""
 	(*user).lastName = ""
 }
