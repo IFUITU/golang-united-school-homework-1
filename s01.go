@@ -1,8 +1,7 @@
-package struct
+package s01
 
 import (
 	"fmt"
-	"reflect"
 )
 
 type User struct {
