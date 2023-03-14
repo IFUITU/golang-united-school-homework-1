@@ -27,8 +27,8 @@ func New() User {
 	return User{}
 }
 func ResetUser(user *User) {
-	user.firstName = ""
-	user.lastName = ""
+	(*user).firstName = ""
+	(*user)r.lastName = ""
 }
 func IsUser(user User) bool {
 	return fmt.Sprintf("%T\n", user) == fmt.Sprintf("%T\n", User{})
