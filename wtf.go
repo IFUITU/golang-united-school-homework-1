@@ -2,6 +2,12 @@ package wft
 
 import "fmt"
 
+type UserInterface interface {
+	SetFirstName(string)
+	SetLastName(string)
+	FullName() string
+}
+
 type User struct {
 	firstName string
 	lastName  string
@@ -9,12 +15,6 @@ type User struct {
 
 func New() User {
   return User{}
-}
-
-type UserInterface interface {
-	SetFirstName(string)
-	SetLastName(string)
-	FullName() string
 }
 
 
