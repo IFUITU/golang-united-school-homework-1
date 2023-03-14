@@ -2,15 +2,15 @@ package wft
 
 import "fmt"
 
+type User struct {
+	firstName string
+	lastName  string
+}
+
 type UserInterface interface {
 	SetFirstName(string)
 	SetLastName(string)
 	FullName() string
-}
-
-type User struct {
-	firstName string
-	lastName  string
 }
 
 func (u *User) SetFirstName(firstname string) {
