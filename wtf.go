@@ -7,15 +7,16 @@ type User struct {
 	lastName  string
 }
 
+func New() User {
+  return User{}
+}
+
 type UserInterface interface {
 	SetFirstName(string)
 	SetLastName(string)
 	FullName() string
 }
 
-func New() User {
-  return User{}
-}
 
 func (u *User) SetFirstName(firstname string) {
 	u.firstName = firstname
