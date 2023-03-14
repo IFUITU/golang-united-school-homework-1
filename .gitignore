@@ -13,10 +13,10 @@
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
-*go.mod
-*go.sum
-.mod
-.sum
+# *go.mod
+# *go.sum
+# .mod
+# .sum
 
-./go.mod
-./go.sum
+# ./go.mod
+# ./go.sum
