@@ -13,6 +13,10 @@ type UserInterface interface {
 	FullName() string
 }
 
+func New() User {
+  return User{}
+}
+
 func (u *User) SetFirstName(firstname string) {
 	u.firstName = firstname
 }
@@ -27,7 +31,8 @@ func New() User {
 	return User{}
 }
 func ResetUser(user *User) {
-	user = &User{}
+	user.firstName = ""
+	user.lastName = ""
 }
 func IsUser(user User) bool {
 	return fmt.Sprintf("%T\n", user) == fmt.Sprintf("%T\n", User{})
