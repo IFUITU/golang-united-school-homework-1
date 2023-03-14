@@ -13,11 +13,6 @@ type User struct {
 	lastName  string
 }
 
-func New() User {
-  return User{}
-}
-
-
 func (u *User) SetFirstName(firstname string) {
 	u.firstName = firstname
 }
