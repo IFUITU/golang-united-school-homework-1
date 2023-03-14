@@ -1,4 +1,4 @@
-package main 
+package wft 
 
 import "fmt"
 
