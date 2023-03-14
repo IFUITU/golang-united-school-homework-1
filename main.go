@@ -1,12 +1,10 @@
-package main
+package main 
 
-import (
-	"fmt"
-)
+import "fmt"
 
 type User struct {
-	name     string
-	lastName string
+	firstName string
+	lastName  string
 }
 
 type UserInterface interface {
@@ -15,34 +13,25 @@ type UserInterface interface {
 	FullName() string
 }
 
-func (u *User) SetFirstName(name string) {
-	u.name = name
+func (u *User) SetFirstName(firstname string) {
+	u.firstName = firstname
 }
-
-func (u *User) SetLastName(lastName string) {
-	u.lastName = lastName
+func (u *User) SetLastName(lastname string) {
+	u.lastName = lastname
 }
-
 func (u *User) FullName() string {
-	return fmt.Sprintf("%s %s", u.lastName, u.name)
+	return u.firstName + " " + u.lastName
 }
 
-func NewUser() User {
+func New() User {
 	return User{}
 }
-
-func ResetUser(input *User) {
-	input.SetFirstName("")
-	input.SetLastName("")
+func ResetUser(user *User) {
+	user = &User{}
 }
-
-func IsUser(input interface{}) bool {
-	if input == nil || reflect.TypeOf(input) != reflect.TypeOf(User{}) {
-		return false
-	}
-	return true
+func IsUser(user User) bool {
+	return fmt.Sprintf("%T\n", user) == fmt.Sprintf("%T\n", User{})
 }
-
-func ProcessUser(u UserInterface) string {
-	return u.FullName()
+func ProcessUser(ui UserInterface) string {
+	return ui.FullName()
 }
