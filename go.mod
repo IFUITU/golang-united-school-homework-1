@@ -1,3 +1,3 @@
-module s01.go
+module main
 
 go 1.20
