@@ -30,7 +30,7 @@ func ResetUser(user *User) {
 	(*user).firstName = ""
 	(*user).lastName = ""
 }
-func IsUser(user interface{}) bool {
+func IsUser(user any) bool {
 	return fmt.Sprintf("%T", user) == fmt.Sprintf("%T", User{})
 }
 func ProcessUser(ui UserInterface) string {
